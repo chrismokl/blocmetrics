@@ -1,5 +1,4 @@
 function(){
-  
   $(document).ready(function(){
     var application_id = $('#blocmetrics').data('application-id');
     var oReq = new XMLHttpRequest();
@@ -9,9 +8,9 @@ function(){
 
   $('*').on('click', function(){
     $.ajax({
-      url: 'http://0.0.0.0:4000/api/v1/clicks', 
-      type: 'POST', 
-      data: { 
+      url: 'http://0.0.0.0:4000/api/v1/clicks',
+      type: 'POST',
+      data: {
         application_id: application_id,
         click: {
           element_name: $(this).prop('tagName'),
@@ -21,7 +20,5 @@ function(){
       }
     });
   });
-
-
 
 }();
