@@ -1,0 +1,12 @@
+%h1 Events
+= @application.clicks.count
+
+%p
+  :escaped
+    Paste this into your <head>
+  %pre
+    = preserve do
+      :escaped
+        <script src='#{request.host_with_port}/blocmetrics.js' id='blocmetrics' data-application-id=#{@application.id}></script>
+
+
