@@ -1,7 +1,7 @@
 function(){
   
   $(document).ready(function(){
-    var application_id = $('#blocmetrics').data('application-id')
+    var application_id = $('#blocmetrics').data('application-id');
     var oReq = new XMLHttpRequest();
     oReq.open("POST",'http://0.0.0.0:4000/api/v1/pageviews/?application_id=' + application_id,true);
     oReq.send();
@@ -19,8 +19,8 @@ function(){
           class_name: $(this).attr('class')
         }
       }
-    })
-  })
+    });
+  });
 
 
 
